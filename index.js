@@ -48,6 +48,7 @@ class Person {
   }
 
   eat(food) {
+    // this.stomach.length < 10 ? this.stomach.push(food);
     if(this.stomach.length < 10) {
       this.stomach.push(food);
     };
@@ -89,6 +90,8 @@ class Car {
   };
 
   drive(distance) {
+    // (this.tank * this.milesPerGallon) < distance ?
+    // this.odometer = (this.tank * this.milesPerGallon); this.tank = 0; return `I ran out of fuel at ${this.odometer} miles!` : this.odometer = distance; this.tank = ((this.tank * this.milesPerGallon) - distance) / this.milesPerGallon
     if((this.tank * this.milesPerGallon) < distance) {
       this.odometer = (this.tank * this.milesPerGallon);
       this.tank = 0;
@@ -199,11 +202,12 @@ class Student extends Lambdasian{
   };
 
   graduate() {
-    if(this.grade > 70) {
-      return true;
-    } else {
-      return false;
-    };
+    this.grade > 70 ? true : false;
+    // if(this.grade > 70) {
+    //   return true;
+    // } else {
+    //   return false;
+    // };
   };
 };
 
